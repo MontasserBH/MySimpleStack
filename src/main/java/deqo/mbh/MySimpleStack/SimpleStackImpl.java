@@ -1,42 +1,42 @@
 package deqo.mbh.MySimpleStack;
 
 import java.util.EmptyStackException;
-import java.util.Objects;
 import java.util.Stack;
 
 /**
  * Created by MONTASSER on 05/11/2016.
+ *
  */
 public class SimpleStackImpl implements SimpleStack {
 
-    Stack<Object> wrappedStack = new Stack<Object>();
+    Stack<Object> stack = new Stack<Object>();
 
     public boolean isEmpty() {
 
-        return wrappedStack.isEmpty();
+        return stack.isEmpty();
     }
 
 
     public int getSize() {
 
-        return wrappedStack.size();
+        return stack.size();
     }
 
 
     public void push(Item item) {
-        wrappedStack.push(item);
+        stack.push(item);
     }
 
 
     public Item peek() throws EmptyStackException {
 
-        return (Item) wrappedStack.peek();
+        return (Item) stack.peek();
     }
 
 
     public Item pop() throws EmptyStackException {
 
-        return (Item) wrappedStack.pop();
+        return (Item) stack.pop();
     }
 
 }
